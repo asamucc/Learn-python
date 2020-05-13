@@ -116,7 +116,7 @@ print(a)
 
 
 
-
+"""
 print("----空白字典已创建----")
 A={}
 global sss 
@@ -154,4 +154,4 @@ while len(sss)!= 0:
      print("结果如下：")
      print(A)
      break
-    
+"""
