@@ -116,7 +116,7 @@ print(a)
 
 
 
-"""
+
 print("----空白字典已创建----")
 A={}
 global sss 
@@ -127,31 +127,26 @@ while A!=None:
 
  if len(A["NAME"])==0 or len(A["AGE"])==0 or len(A["SEX"])==0:
    print(A,"数据不完整")
-   print(len(A))
    continue
  if len(A["NAME"])>0 and len(A["AGE"])>0 and len(A["SEX"])>0:  
 
    print(A)
    break
 
-sss=input("是否修改(Y/N):")
-print(A) 
-
-while len(sss)!= 0:
-
-  if sss!="Y" and sss!="N":
-     print("错误选项，请重新输入：")
-     
+while 1!= 0:
      sss=input("是否修改(Y/N):")
-  if sss=="Y":
-     a=input("请输入修改项（NAME/AGE/SEX）:")
-     b=input("请输入值：")
-     A[a]=b
-     print("结果如下：")
-     print(A)
-     break
-  if sss =="N":
-     print("结果如下：")
-     print(A)
-     break
-"""
+     if sss!="Y" and sss!="N":
+      print("错误选项，请重新输入")
+      continue
+     
+     if sss=="Y":
+      a=input("请输入修改项（NAME/AGE/SEX）:")
+      b=input("请输入值：")
+      A[a]=b
+      print("结果如下：")
+      print(A)
+      continue
+     if sss =="N":
+      print("结果如下：")
+      print(A)
+      break
