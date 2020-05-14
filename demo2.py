@@ -1,5 +1,7 @@
 
 
+
+"""
 def is_number(s):
     try:
         float(s)
@@ -7,6 +9,8 @@ def is_number(s):
     except ValueError:
         return False
 #创建数字识别方法↑
+"""
+
 
 """
 #循环+判断↓
@@ -64,15 +68,14 @@ else:
     print_ED(len(c)+len(d))
 """
 
-# e=[1,2,3,4,5,6,7,8,9,0]
-# for i in e:
-#     print(i)
+
 
 # b=list(range(1,100,4)) #表示1-100的数列,步进为4
 # print(b) #输出1，5，9，13，...93,97
 
 
-
+"""
+#乘法表
 for i in range(1,10):
    for j in range(1,i+1):
        #第三步，限制计算区间
@@ -80,3 +83,64 @@ for i in range(1,10):
         #第一步，打印所有乘积且不换行
    print()
         #第二步，内循环9次结束后换行
+"""
+
+
+
+"""
+红绿灯
+import time  #时间库函数调用
+while 1:
+ for i in range(1,74):
+  print("%d秒"%(i)) #如果i是数字，则用%d或%f代替
+  i=int(i)
+  if i<=35:
+    print("RED灯第",(i%36),"秒闪烁")
+  elif i>35 and i<=70:
+    print("GREEN灯第",(i%36)+1,"秒闪烁")
+  elif i>70 and i<=73:
+    print("YELLOW灯"+"第",(i%70),"秒闪烁")
+  time.sleep(1)
+"""
+
+
+
+"""
+#注册功能
+print("========注册页面=========")
+USERINFO={}
+while 1:
+   ID=input("请输入入帐号（小写开头，6-9位数）")
+   print(list(ID))
+   while len(ID) in range(6,10):
+    if list(ID)[0].islower():
+      PASSWORD=input("请输入密码（8-12位数）")
+      if len(PASSWORD) in range(8,13):
+        USERINFO[ID]=PASSWORD
+        print(USERINFO)
+        break
+      else:
+        print("密码格式错误，重新输入")
+        continue
+    else:
+       print("账号不合要求小写开头，重新输入")
+       break
+   else:
+      print("账号不合要求6-9位数，重新输入")
+      break
+"""
+
+
+
+"""
+#异常捕获
+NAME=input("NAME:")
+AGE=input("AGE:")
+try: #当try语句中运行报错时，执行expect
+   if int(AGE)>18:  #int（）运行报错
+      print(NAME,"成年了")
+   else:
+      print(NAME,"未成年")
+except:
+   print("年龄输入错误")
+"""
