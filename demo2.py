@@ -86,7 +86,6 @@ for i in range(1,10):
 """
 
 
-
 """
 红绿灯
 import time  #时间库函数调用
