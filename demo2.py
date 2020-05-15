@@ -105,32 +105,6 @@ while 1:
 
 
 
-"""
-#注册功能
-print("========注册页面=========")
-USERINFO={}
-while 1:
-   ID=input("请输入入帐号（小写开头，6-9位数）")
-   print(list(ID))
-   while len(ID) in range(6,10):
-    if list(ID)[0].islower():
-      PASSWORD=input("请输入密码（8-12位数）")
-      if len(PASSWORD) in range(8,13):
-        USERINFO[ID]=PASSWORD
-        print(USERINFO)
-        break
-      else:
-        print("密码格式错误，重新输入")
-        continue
-    else:
-       print("账号不合要求小写开头，重新输入")
-       break
-   else:
-      print("账号不合要求6-9位数，重新输入")
-      break
-"""
-
-
 
 """
 #异常捕获
@@ -144,3 +118,32 @@ try: #当try语句中运行报错时，执行expect
 except:
    print("年龄输入错误")
 """
+
+
+
+
+#注册功能
+print("========注册页面=========")
+######先定义方法
+def is_hefa(username,password):
+   if 9>=len(username)>=6:
+      if list(username)[0].islower():
+         if 12>=len(password)>=8:
+          return True
+         else:
+          print("密码必须8-12位数")
+
+      else:
+         print("账号必须小写字母开头")
+   else:
+      print("账号必须6-9位数")
+######再执行方法
+Userinfo={}
+while 1:
+  UserID=input("输入账号：")
+  PassWord=input("输入密码：")
+  if is_hefa(UserID,PassWord) is True:
+     Userinfo[UserID]=PassWord
+     print(Userinfo)
+  else:
+     continue
