@@ -11,7 +11,7 @@ sql = input("输入操作语句：")   # ↓SQL 查询语句
 try:
    cursor.execute(sql)  # 执行SQL语句
   
-   results = cursor.fetchall()   # 获取所有记录列表
+   results = cursor.fetchall()   # 获取所有执行记录列表
 
    print(results)
 except:
